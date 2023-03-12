@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Buget</string>
+    <string name="add_earning_button">Add Earning</string>
+    <string name="add_expense_button">Add expense</string>
+    <string name="budget_text">Budget:</string>
+    <string name="save_expense_button">save</string>
+    <string name="value_expense_number_decimal">Value</string>
+    <string name="name_expense_plainText">Name</string>
+    <string name="expense_receipt_image">add receipt</string>
+    <string name="image_description">TODO</string>
+    <string name="name_earning_plainText">Name</string>
+    <string name="value_earning_number_decimal">Value</string>
+    <string name="save_earning_button">save</string>
+</resources>

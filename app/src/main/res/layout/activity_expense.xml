@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpenseActivity">
+
+  <Button
+      android:id="@+id/save_expense_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginBottom="32dp"
+      android:text="@string/save_expense_button"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <EditText
+      android:id="@+id/value_expense_number_decimal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="32dp"
+      android:layout_marginEnd="16dp"
+      android:ems="10"
+      android:hint="@string/value_expense_number_decimal"
+      android:importantForAutofill="no"
+      android:inputType="numberDecimal"
+      android:minHeight="48dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/name_expense_plainText" />
+
+  <EditText
+      android:id="@+id/name_expense_plainText"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="100dp"
+      android:layout_marginEnd="16dp"
+      android:ems="10"
+      android:hint="@string/name_expense_plainText"
+      android:importantForAutofill="no"
+      android:inputType="textPersonName"
+      android:minHeight="48dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+      android:id="@+id/expense_receipt_image"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="32dp"
+      android:layout_marginEnd="16dp"
+      app:layout_constraintEnd_toStartOf="@+id/add_receipt_image_button"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/value_expense_number_decimal"
+      tools:srcCompat="@tools:sample/avatars"
+      android:contentDescription="@string/image_description" />
+
+  <Button
+      android:id="@+id/add_receipt_image_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="32dp"
+      android:text="@string/expense_receipt_image"
+      app:layout_constraintBottom_toBottomOf="@+id/expense_receipt_image"
+      app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
