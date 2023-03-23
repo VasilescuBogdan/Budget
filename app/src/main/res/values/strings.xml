@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Buget</string>
+    <string name="app_name">Budget</string>
     <string name="add_earning_button">Add Earning</string>
     <string name="add_expense_button">Add expense</string>
     <string name="budget_text">Budget:</string>
