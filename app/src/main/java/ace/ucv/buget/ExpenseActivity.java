@@ -17,10 +17,13 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import ace.ucv.buget.model.Expense;
 
 public class ExpenseActivity extends AppCompatActivity {
+
+    private static final String TAG = ExpenseActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,8 @@ public class ExpenseActivity extends AppCompatActivity {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
         Expense expense = new Expense();
 
         EditText nameText = findViewById(R.id.name_expense_plainText);
@@ -47,7 +52,7 @@ public class ExpenseActivity extends AppCompatActivity {
 
         expense.setName(nameText.getText().toString());
         expense.setAmount(Float.parseFloat(amountNumber.getText().toString()));
-        expense.setDate(LocalDateTime.now());
+        expense.setDate(LocalDateTime.now().format(formatter));
         expense.setLocation(locationText.getText().toString());
         expense.setCategory(categoryDropdown.getSelectedItem().toString());
 
@@ -56,13 +61,13 @@ public class ExpenseActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        Log.d("SUCCESS", "Document successfully written!");
+                        Log.d(TAG, "Document successfully written!");
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.d("FAILURE", "Document was not written");
+                        Log.d(TAG, "Document was not written");
                     }
                 });
 

@@ -15,10 +15,13 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import ace.ucv.buget.model.Earning;
 
 public class EarningActivity extends AppCompatActivity {
+
+    private static final String TAG = EarningActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,8 @@ public class EarningActivity extends AppCompatActivity {
     public void saveEarning(View view) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
         //get values from fields
         EditText nameText = findViewById(R.id.name_earning_plainText);
         EditText amountNumber = findViewById(R.id.amount_number_decimal);
@@ -36,20 +41,20 @@ public class EarningActivity extends AppCompatActivity {
         Earning earning = new Earning();
         earning.setName(nameText.getText().toString());
         earning.setAmount(Float.parseFloat(amountNumber.getText().toString()));
-        earning.setDate(LocalDateTime.now());
+        earning.setDate(LocalDateTime.now().format(formatter));
 
         db.collection("Earning")
                 .add(earning)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        Log.d("SUCCESS", "Document successfully written!");
+                        Log.d(TAG, "Document successfully written!");
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.d("FAILURE", "Document was not written");
+                        Log.d(TAG, "Document was not written");
                     }
                 });
 

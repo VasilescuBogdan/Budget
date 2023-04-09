@@ -1,12 +1,11 @@
 package ace.ucv.buget.model;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 public class Earning implements Serializable {
     private String name;
     private Float amount;
-    private LocalDateTime date;
+    private String date;
 
     public String getName() {
         return name;
@@ -24,11 +23,11 @@ public class Earning implements Serializable {
         this.amount = amount;
     }
 
-    public LocalDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(String date) {
         this.date = date;
     }
 }

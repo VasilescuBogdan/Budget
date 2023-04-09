@@ -2,14 +2,13 @@ package ace.ucv.buget.model;
 
 import java.io.File;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 public class Expense implements Serializable {
     private String name;
     private Float amount;
     private String location;
     private String category;
-    private LocalDateTime date;
+    private String date;
     private File image;
 
 
@@ -45,11 +44,11 @@ public class Expense implements Serializable {
         this.category = category;
     }
 
-    public LocalDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

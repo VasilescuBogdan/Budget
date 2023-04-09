@@ -10,4 +10,6 @@
     <string name="image_description">TODO</string>
     <string name="location_hint">Location</string>
     <string name="dropdown_description">select expense category</string>
+    <string name="receiptImageDescription">Recipe</string>
+    <string name="item_list_button">List</string>
 </resources>

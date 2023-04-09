@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/textViewItemAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/textViewItemDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/textViewExpenseLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/textViewExpenseCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+   <!-- <ImageView
+        android:id="@+id/imageViewReceipt"
+        android:layout_width="210dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/receiptImageDescription" /> TODO IMPLEMENT CAMERA-->
+</RelativeLayout>
