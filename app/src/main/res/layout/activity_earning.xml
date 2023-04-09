@@ -14,23 +14,23 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="@string/name_earning_plainText"
+        android:hint="@string/name_plainText"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/value_earning_number_decimal"
+        android:id="@+id/amount_number_decimal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="@string/value_earning_number_decimal"
+        android:hint="@string/amount_number_decimal"
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
@@ -40,12 +40,20 @@
 
     <Button
         android:id="@+id/save_earning_button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:text="@string/save_earning_button"
+        android:onClick="saveEarning"
+        android:text="@string/save_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_number_decimal"
+        app:layout_constraintVertical_bias="0.746" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
