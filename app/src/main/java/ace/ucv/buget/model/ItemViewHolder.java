@@ -1,5 +1,6 @@
 package ace.ucv.buget.model;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ public class ItemViewHolder extends RecyclerView.ViewHolder{
     TextView textViewDate;
     TextView textViewExpenseLocation;
     TextView textViewExpenseCategory;
-    //ImageView imageViewReceipt; TODO IMPLEMENT CAMERA
+    ImageView imageViewReceipt;
 
 
     public ItemViewHolder(@NonNull View itemView) {
@@ -25,5 +26,6 @@ public class ItemViewHolder extends RecyclerView.ViewHolder{
         textViewDate = itemView.findViewById(R.id.textViewItemDate);
         textViewExpenseLocation = itemView.findViewById(R.id.textViewExpenseLocation);
         textViewExpenseCategory = itemView.findViewById(R.id.textViewExpenseCategory);
+        imageViewReceipt = itemView.findViewById(R.id.imageViewReceipt);
     }
 }

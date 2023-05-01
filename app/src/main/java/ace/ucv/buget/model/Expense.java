@@ -9,7 +9,7 @@ public class Expense implements Serializable {
     private String location;
     private String category;
     private String date;
-    private File image;
+    private String image;
 
 
     public String getName() {
@@ -52,11 +52,11 @@ public class Expense implements Serializable {
         this.date = date;
     }
 
-    public File getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(File image) {
+    public void setImage(String image) {
         this.image = image;
     }
 }

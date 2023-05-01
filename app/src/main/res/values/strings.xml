@@ -2,7 +2,7 @@
     <string name="app_name">Budget</string>
     <string name="add_earning_button">Earning</string>
     <string name="add_expense_button">Expense</string>
-    <string name="budget_text">Budget:</string>
+    <string name="budget_text">Budget: %.2f</string>
     <string name="save_button">save</string>
     <string name="amount_number_decimal">Amount</string>
     <string name="name_plainText">Name</string>

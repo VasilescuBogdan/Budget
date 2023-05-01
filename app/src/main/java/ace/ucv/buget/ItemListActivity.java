@@ -2,6 +2,7 @@ package ace.ucv.buget;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ace.ucv.buget.model.ItemAdapter;
+import ace.ucv.buget.workers.BudgetCalculator;
 
 public class ItemListActivity extends AppCompatActivity {
 
@@ -26,6 +28,11 @@ public class ItemListActivity extends AppCompatActivity {
 
         List<DocumentSnapshot> mergedList = new ArrayList<>();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        TextView budgetTextView = findViewById(R.id.budget_text);
+
+        BudgetCalculator budgetCalculator = new BudgetCalculator(db, budgetTextView, this);
+        budgetCalculator.execute();
 
         db.collection("Expense")
                 .get()
