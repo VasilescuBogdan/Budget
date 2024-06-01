@@ -1,11 +1,9 @@
-package ace.ucv.buget.workers;
+package ace.ucv.budget.workers;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Build;
-import android.widget.TextView;
 
 import androidx.core.app.NotificationCompat;
 
@@ -18,8 +16,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.lang.ref.WeakReference;
 import java.util.Calendar;
 import java.util.Locale;
-
-import ace.ucv.buget.R;
 
 public class MonthlySumCalculator extends AsyncTask<Void, Void, Float> {
 

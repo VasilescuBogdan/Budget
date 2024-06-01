@@ -1,4 +1,4 @@
-package ace.ucv.buget;
+package ace.ucv.budget;
 
 import org.junit.Test;
 

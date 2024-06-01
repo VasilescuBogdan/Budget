@@ -1,4 +1,4 @@
-package ace.ucv.buget;
+package ace.ucv.budget;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -14,8 +14,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
 
-import ace.ucv.buget.model.ItemAdapter;
-import ace.ucv.buget.workers.BudgetCalculator;
+import ace.ucv.budget.model.ItemAdapter;
+import ace.ucv.budget.workers.BudgetCalculator;
 
 public class ItemListActivity extends AppCompatActivity {
 

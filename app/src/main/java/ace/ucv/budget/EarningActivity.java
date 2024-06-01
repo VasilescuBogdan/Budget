@@ -1,4 +1,4 @@
-package ace.ucv.buget;
+package ace.ucv.budget;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +17,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import ace.ucv.buget.model.Earning;
+import ace.ucv.budget.model.Earning;
 
 public class EarningActivity extends AppCompatActivity {
 

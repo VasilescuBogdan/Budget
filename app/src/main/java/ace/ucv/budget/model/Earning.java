@@ -1,4 +1,4 @@
-package ace.ucv.buget.model;
+package ace.ucv.budget.model;
 
 import java.io.Serializable;
 

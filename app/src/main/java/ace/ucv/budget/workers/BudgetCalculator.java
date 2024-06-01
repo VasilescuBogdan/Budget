@@ -1,4 +1,4 @@
-package ace.ucv.buget.workers;
+package ace.ucv.budget.workers;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -11,8 +11,9 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.lang.ref.WeakReference;
+import java.util.Objects;
 
-import ace.ucv.buget.R;
+import ace.ucv.budget.R;
 
 public class BudgetCalculator extends AsyncTask<Void, Void, Float> {
 
@@ -33,10 +34,11 @@ public class BudgetCalculator extends AsyncTask<Void, Void, Float> {
             Query query = db.collection(collectionName);
             QuerySnapshot querySnapshot = Tasks.await(query.get());
             for (DocumentSnapshot documentSnapshot: querySnapshot.getDocuments()) {
-                sum += documentSnapshot.getDouble("amount").floatValue();
+                sum += Objects.requireNonNull(documentSnapshot.getDouble("amount"))
+                              .floatValue();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return sum;
     }
@@ -52,12 +54,7 @@ public class BudgetCalculator extends AsyncTask<Void, Void, Float> {
         TextView sumTextView = sumTextViewRef.get();
         String sumText = context.getString(R.string.budget_text, sum);
         if(sumTextView != null) {
-            sumTextView.post(new Runnable() {
-                @Override
-                public void run() {
-                    sumTextView.setText(sumText);
-                }
-            });
+            sumTextView.post(() -> sumTextView.setText(sumText));
         }
     }
 }

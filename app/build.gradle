@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'ace.ucv.buget'
+    namespace 'ace.ucv.budget'
     compileSdk 33
 
     defaultConfig {
-        applicationId "ace.ucv.buget"
+        applicationId "ace.ucv.budget"
         minSdk 29
         //noinspection OldTargetApi
         targetSdk 33

@@ -1,6 +1,5 @@
-package ace.ucv.buget.model;
+package ace.ucv.budget.model;
 
-import java.io.File;
 import java.io.Serializable;
 
 public class Expense implements Serializable {

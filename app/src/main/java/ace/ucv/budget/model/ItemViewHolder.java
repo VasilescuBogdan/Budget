@@ -1,16 +1,13 @@
-package ace.ucv.buget.model;
+package ace.ucv.budget.model;
 
-import android.util.Log;
+import ace.ucv.budget.R;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import ace.ucv.buget.R;
-
-public class ItemViewHolder extends RecyclerView.ViewHolder{
+public class ItemViewHolder extends RecyclerView.ViewHolder {
     TextView textViewName;
     TextView textViewAmount;
     TextView textViewDate;

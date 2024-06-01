@@ -1,4 +1,4 @@
-package ace.ucv.buget;
+package ace.ucv.budget;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import ace.ucv.buget.workers.BudgetCalculator;
+import ace.ucv.budget.workers.BudgetCalculator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,4 +50,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ItemListActivity.class);
         startActivity(intent);
     }
+
 }
